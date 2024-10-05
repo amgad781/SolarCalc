@@ -1,0 +1,61 @@
+﻿@page
+@model HomaePageModel
+@{
+    ViewData["Title"] = "Home page";
+    Layout = "Home_Layout";
+}
+
+<section class=" slider_section ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="detail_box">
+                    <br />
+                    <br />
+                    <br />
+                    <h1>
+                        Solar <br>
+                        Cells <br>
+                        Providers
+                    </h1>
+                    <p>
+                        The depletion of Earth's finite energy resources, primarily fossil fuels, poses critical challenges alongside the escalating threat of climate change. The burning of these
+                        fuels significantly contributes to greenhouse gas emissions, resulting in global warming, rising sea levels,
+                        and increased extreme weather events, threatening ecosystems and human livelihoods. Addressing this crisis requires a transition to renewable energy sources, such as solar, 
+                        wind, and hydropower, which are sustainable and have minimal environmental impact. Enhancing energy efficiency 
+                        and fostering international cooperation, policy changes, and public awareness are essential for reducing reliance on fossil fuels and promoting a greener future.
+                    </p>
+                    <a href="\about" class="">
+                        About Us
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 offset-lg-1">
+                <div class="img_content">
+                    <div class="img_container">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="img-box">
+                                        <img src="images/SolarCell.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="img-box">
+                                        <img src="images/SolarCell.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

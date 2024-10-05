@@ -1,0 +1,155 @@
+﻿@page
+@using SolarCalc.pages
+@model CalcModel
+@{
+    ViewData["Title"] = "Error";
+    Layout = "Calc_Layout";
+}
+
+
+
+<section class="contact_section layout_padding">
+    <div class="container ">
+        <div class="heading_container">
+            <h2>Enter the data</h2>
+            <img src="images/plug.png" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="space">Enter The space in M:</label>
+                        <input type="number" asp-for="@Model.space" />
+                    </div>
+
+                     <div class="form-group">
+                        <label>Select your city:</label>
+
+                        <div>
+                            <label for="city1">California</label>
+                            <input type="radio" id="city1" name="CityID" value="1" />
+                        </div>
+
+                        <div>
+                            <label for="city2">Florida</label>
+                            <input type="radio" id="city2" name="CityID" value="2" />
+                        </div>
+
+                        <div>
+                            <label for="city3">North California</label>
+                            <input type="radio" id="city3" name="CityID" value="3" />
+                        </div>
+
+                        <div>
+                            <label for="city4">Texas</label>
+                            <input type="radio" id="city4" name="CityID" value="4" />
+                        </div>
+                    </div>
+
+
+                    <div >
+                        <button type="submit" class="btn btn-primary">Go to Result</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="map_container">
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .form-group input[type="radio"] {
+        width: 20px; /* Adjust the width as needed */
+        height: 20px; /* Adjust the height as needed */
+        margin-right: 5px;
+        vertical-align: middle;
+        appearance: none; /* Remove default browser styling */
+        background-color: #fff; /* Set background color to white */
+        border: 1px solid #ccc; /* Add a border */
+        border-radius: 50%; /* Make it circular */
+        cursor: pointer;
+    }
+
+    .form-group input[type="radio"]:checked {
+        background-color: #007bff; /* Set checked color */
+    }
+
+    .form-group label {
+        margin-right: 10px; /* Add spacing between label and radio button */
+    }
+</style>
+
+@if (Model.eff > 0 )
+{
+    <section class="blog_section layout_padding">
+        <div class="container">
+            <div class="heading_container">
+                <h2>Result</h2>
+                <img src="images/plug.png" alt="">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="images/Monocrystalline silicon.WEBP " alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>Monocrystalline silicon</h5>
+                            <p>
+                                The cost = "@Model.cost1" <br />
+                                The Efficiency = "@Model.eff"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="images/Polysilicon.jpg" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>Polysilicon</h5>
+                            <p>
+                                The cost = "@Model.cost2" <br />
+                                The Efficiency = "@Model.eff"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+<section class="info_section layout_padding">
+    <div class="container">
+        <div class="info_contact">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/location-white.png" alt="">
+                    <span>Nahia City, Egypt</span>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/telephone-white.png" alt=" ">
+                    <span>
+                        Call : +201032829990 <br />
+                    </span>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/envelope-white.png" alt="">
+                    <span>
+                        ahmedamgad781@gmail.com
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
